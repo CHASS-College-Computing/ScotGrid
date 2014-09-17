@@ -60,5 +60,34 @@ ScotGridDataProcessing/.idea/vcs.xml
 ScotGridDataProcessing/.idea/workspace.xml
 
 ScotGridDataProcessing/ScotGridDataProcessing.iml
+<<<<<<< HEAD
 
 ScotGridDataProcessing/.idea/jsLibraryMappings.xml
+=======
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml
+.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml
+.idea/libraries/Maven__commons_io_commons_io_1_3_1.xml
+.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml
+.idea/libraries/Maven__com_google_code_geocoder_java_geocoder_java_0_16.xml
+.idea/libraries/Maven__com_google_code_gson_gson_2_3.xml
+.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml
+.idea/libraries/Maven__org_apache_poi_poi_3_10_FINAL.xml
+.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_10_FINAL.xml
+.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_10_FINAL.xml
+.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml
+.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml
+.idea/libraries/Maven__stax_stax_api_1_0_1.xml
+.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/ScotGrid.iml
+.idea/vcs.xml
+.idea/workspace.xml
+ScotGridDataProcessing/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+ScotGridDataProcessing/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+>>>>>>> FETCH_HEAD
