@@ -1,6 +1,8 @@
-/**
- * Created by isaaclong on 9/17/14.
- */
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Properties;
+import java.util.Vector;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -9,10 +11,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
-import java.io.IOException;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Vector;
+import com.google.gson.Gson;
+
+import java.sql.*;
 
 public class ScotGridDataProcessing
 {
@@ -20,7 +21,6 @@ public class ScotGridDataProcessing
     {
         // get sheet
         readExcel instance = new readExcel();
-        //instance.createNewWorkbook();
         XSSFWorkbook riverside_jobs = instance.readWorkbook();
         XSSFSheet sheet = riverside_jobs.getSheetAt(0);
 
@@ -45,6 +45,30 @@ public class ScotGridDataProcessing
             addresses.add(gi.getJSONByGoogle(fullAddress));
         }
 
-        System.out.print(addresses);
+        //System.out.print(addresses);
+
+        // create a vector of responses
+        List<GeocoderResponse> geocoderResponses = new Vector<GeocoderResponse>();
+        Gson gson = new Gson();
+
+        // for each JSON address, add equivalent JSON class to the response list
+        int i = 0;
+        for (String address : addresses)
+        {
+            geocoderResponses.add(gson.fromJson(addresses.get(i), GeocoderResponse.class));
+
+//            System.out.println((i+2) + ":");
+//            System.out.println(geocoderResponses.get(i).getResults().get(0).getAddressComponents().get(1).getShortName() + "\n");
+
+            ++i;
+        }
+
+
+        // TODO: establish a connection, execute the sql statements to insert data
+        
+        //Connection conn = null;
+        //Properties connectionProps = new Properties();
+
+
     }
 }
